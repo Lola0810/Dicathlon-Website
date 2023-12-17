@@ -1,0 +1,358 @@
+/***************/
+/*****ROOTS*****/
+/***************/
+/* FONTS */
+@font-face {
+  src: url(../assets/font/Rubik-Medium.ttf);
+  font-family: RubikMedium;
+}
+@font-face {
+  src: url(../assets/font/Rubik-Regular.ttf);
+  font-family: RubikRegular;
+}
+/* COULEURS */
+:root {
+  --beige: #FFF3E7;
+  --text: #1A202D;
+  --main: #4C956C;
+  --secondary: #F29202;
+  --white: #FFFFFF;
+}
+
+/* BASIC */
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "RubikRegular", sans-serif;
+  color: var(--text_color);
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  min-height: 90%;
+}
+
+h1, h2, h3, h4, p {
+  color: var(--text);
+}
+
+h1, h2 {
+  font-family: "RubikMedium", sans-serif;
+}
+
+h1 {
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: 1.563rem;
+}
+
+h3 {
+  font-family: "RubikMedium", sans-serif;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-family: "RubikMedium", sans-serif;
+}
+
+ul, li {
+  font-size: 1.563rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.button {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary);
+  transition-duration: 0.5s;
+  padding: 7px 16px;
+}
+
+.button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.8;
+}
+
+/****************/
+/*****HEADER*****/
+/****************/
+.header {
+  display: flex;
+  width: 100%;
+  height: 9vh;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 5px 3px #868686;
+}
+.header > li {
+  list-style: none;
+}
+.header > li > a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+/****************/
+/*****FOOTER*****/
+/****************/
+footer {
+  display: flex;
+  width: 100%;
+  height: 9vh;
+  background-color: var(--text);
+  color: var(--white);
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+footer p {
+  color: var(--white);
+}
+footer .social {
+  margin-left: 2vw;
+}
+footer .texte-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 24vw;
+}
+footer ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  color: var(--white);
+  font-size: 1rem;
+}
+footer ul a:hover {
+  opacity: 1;
+}
+footer li {
+  display: inline;
+  padding: 0 10px;
+}
+
+/*****************/
+/*****ACCUEIL*****/
+/*****************/
+.accueil > img {
+  background-image: url(../assets/img/banner.png);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.utilisation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4vh;
+  height: 39vh;
+  justify-content: center;
+}
+.utilisation .categories {
+  display: flex;
+  margin: 0 67px;
+  flex-direction: column;
+  align-items: center;
+}
+.utilisation .categories > img {
+  margin-bottom: 2vh;
+}
+.utilisation .categories:nth-child(2n+1) {
+  margin-top: 3vh;
+}
+
+#title-utilisation {
+  margin-left: 8vh;
+  margin-top: 4vh;
+}
+
+#ligne-titre {
+  border-bottom: 5px solid var(--main);
+  display: block;
+  margin-left: 11vh;
+  width: 29vh;
+  height: 1vh;
+}
+
+/*****************/
+/*****PRODUIT*****/
+/*****************/
+.produit > a {
+  position: absolute;
+  top: 12vh;
+  left: 4vh;
+}
+.produit .container-produit {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
+}
+.produit .container-produit img {
+  width: 32%;
+}
+.produit .description {
+  margin-top: 11vh;
+  width: 74vh;
+}
+.produit .description h1 {
+  text-transform: uppercase;
+}
+.produit .description h3 {
+  margin-top: 2vh;
+}
+.produit .description > a > button {
+  margin-top: 2vh;
+}
+.produit .description span {
+  margin-top: 2vh;
+  display: block;
+  width: 20rem;
+  height: 0.1rem;
+  background: #D9D9DA;
+}
+
+/*****************/
+/*****PRODUIT*****/
+/*****************/
+.catalogue {
+  display: flex;
+}
+.catalogue .container-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.catalogue .container-card > a {
+  position: absolute;
+  top: 12vh;
+  left: 4vh;
+}
+.catalogue .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  width: 16vw;
+  height: 50vh;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px 0px rgba(115, 115, 115, 0.11);
+  transition: transform 0.3s;
+}
+.catalogue .card:hover {
+  transform: scale(1.1);
+}
+.catalogue .card img {
+  width: 15vw;
+  height: 30vh;
+}
+.catalogue .card h2 {
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.catalogue .card h3 {
+  margin-left: 1vw;
+  margin-top: -1vh;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--main);
+  margin-bottom: 3vh;
+}
+.catalogue .card .bouton-card {
+  cursor: pointer;
+  width: 10vw;
+  height: 5vh;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  background-color: var(--secondary);
+}
+.catalogue .card .bouton-card:hover {
+  background-color: rgba(242, 146, 2, 0.7);
+  transition: 0.2s;
+}
+
+/*******************************/
+/*****CONNEXION/INSCRIPTION*****/
+/*******************************/
+.connexion {
+  display: flex;
+  justify-content: center;
+}
+
+.case-connexion {
+  display: flex;
+  flex-direction: column;
+  margin-right: 7vw;
+  background-color: #FFF3E7;
+  width: 35vw;
+  height: 62vh;
+  margin-top: 10vh;
+}
+.case-connexion form {
+  text-align: center;
+}
+.case-connexion img {
+  margin-top: -10vh;
+  margin-left: 28vh;
+  width: 28%;
+}
+.case-connexion h2 {
+  margin-top: 6vh;
+}
+
+.inscription {
+  display: flex;
+  justify-content: center;
+}
+
+.case-inscription {
+  display: flex;
+  flex-direction: column;
+  margin-right: 7vw;
+  background-color: #FFF3E7;
+  width: 35vw;
+  height: 62vh;
+  margin-top: 10vh;
+}
+.case-inscription form {
+  text-align: center;
+}
+.case-inscription img {
+  margin-top: -10vh;
+  margin-left: 28vh;
+  width: 28%;
+}
+.case-inscription h2 {
+  margin-top: 6vh;
+}/*# sourceMappingURL=style.css.map */
