@@ -1,2 +1,2 @@
-# BUT2_2023_navarro_quedec
+# BUT2_2023_Dicathlon
  SAE301
